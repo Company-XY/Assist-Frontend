@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { clearJob } from "../../store/Slices/jobSlice";
 import AsyncSelect from "react-select/async";
 import { formatDistanceToNow } from "date-fns";
-import { allVirtualAssistantSkills } from "../../constants/skills";
+import { allVirtualAssistantSkills } from "../../constants/Skills";
 
 const filterSkills = (inputValue) => {
   return allVirtualAssistantSkills.filter((skill) =>
