@@ -105,7 +105,7 @@ const Header = () => {
               </button>
             </div>
             <div
-              className="items-center hidden justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
+              className="items-center hidden justify-between w-full lg:flex lg:w-auto lg:order-1"
               id="mobile-menu-2"
             >
               <ul
@@ -239,13 +239,13 @@ const Header = () => {
                 className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
               >
                 <li>
-                  <RouterLink
-                    to="/"
+                  <ScrollLink
+                    to="Hero"
                     className="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
                     aria-current="page"
                   >
                     Home
-                  </RouterLink>
+                  </ScrollLink>
                 </li>
                 <li>
                   <ScrollLink
@@ -299,13 +299,13 @@ const Header = () => {
                   className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
                 >
                   <li>
-                    <RouterLink
-                      to="/"
+                    <ScrollLink
+                      to="Hero"
                       className="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
                       aria-current="page"
                     >
                       Home
-                    </RouterLink>
+                    </ScrollLink>
                   </li>
                   <li>
                     <ScrollLink
