@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import Routers from "../routes/routers";
+import Routers from "../routes/Routers";
 
 const Layout = () => {
   return (
