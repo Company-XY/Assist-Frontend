@@ -4,7 +4,6 @@ import { removeUser } from "../store/Slices/userSlice";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Link as ScrollLink } from "react-scroll";
-import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.png";
 
 const Header = () => {
