@@ -3,7 +3,7 @@ import feature2 from "../../assets/feature-2.jpg";
 
 const Section1 = () => {
   return (
-    <section className="bg-gray-50 dark:bg-gray-800">
+    <section id="Section1" className="bg-gray-50 dark:bg-gray-800">
       <div className="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6">
         <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
           <div className="text-gray-500 sm:text-lg dark:text-gray-400">
