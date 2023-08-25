@@ -3,7 +3,8 @@ import { Link as RouterLink } from "react-router-dom";
 import { removeUser } from "../store/Slices/userSlice";
 import { useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import logo from "../assets/logo.png";
+import light_logo from "../assets/transparent_logo.png";
+import dark_logo from "../assets/dark_logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleDarkMode } from "../store/Slices/darkMode";
 import { BsMoonStarsFill, BsFillSunFill } from "react-icons/bs";
@@ -13,13 +14,15 @@ const Header = () => {
   const navigate = useNavigate();
   const [scrolling, setScrolling] = useState(false);
   const [nav, setNav] = useState(false);
-  const [darkIcon, setDarkIcon] = useState(false);
+  const [darkIcon, setDarkIcon] = useState(true);
+  const [logo, setLogo] = useState(false);
 
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 
   const handleDarkModeToggle = () => {
     dispatch(toggleDarkMode());
     setDarkIcon(!darkIcon);
+    setLogo((prevLogo) => !prevLogo);
   };
 
   const isAuthenticated = localStorage.getItem("user") !== null;
@@ -71,11 +74,11 @@ const Header = () => {
               >
                 {darkIcon ? (
                   <span className="">
-                    <BsFillSunFill size={20} />
+                    <BsMoonStarsFill size={20} />
                   </span>
                 ) : (
                   <span className="">
-                    <BsMoonStarsFill size={20} />
+                    <BsFillSunFill size={20} />
                   </span>
                 )}
               </button>
@@ -201,11 +204,11 @@ const Header = () => {
                     >
                       {darkIcon ? (
                         <span className="">
-                          <BsFillSunFill size={20} />
+                          <BsMoonStarsFill size={20} />
                         </span>
                       ) : (
                         <span className="">
-                          <BsMoonStarsFill size={20} />
+                          <BsFillSunFill size={20} />
                         </span>
                       )}
                     </button>
@@ -219,8 +222,12 @@ const Header = () => {
           <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
             {/*-------------User not authenticated--------------*/}
             <RouterLink to="/" className="flex items-center">
-              <img src="" className="h-6 mr-3 sm:h-9" alt="" />
-              <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+              <img
+                src={logo ? dark_logo : light_logo}
+                className="h-5 sm:h-6 md:h-8"
+                alt=""
+              />
+              <span className="hidden self-center text-xl font-semibold whitespace-nowrap dark:text-white">
                 assist.africa
               </span>
             </RouterLink>
@@ -232,11 +239,11 @@ const Header = () => {
               >
                 {darkIcon ? (
                   <span className="">
-                    <BsFillSunFill size={20} />
+                    <BsMoonStarsFill size={20} />
                   </span>
                 ) : (
                   <span className="">
-                    <BsMoonStarsFill size={20} />
+                    <BsFillSunFill size={20} />
                   </span>
                 )}
               </button>
@@ -414,11 +421,11 @@ const Header = () => {
                     >
                       {darkIcon ? (
                         <span className="">
-                          <BsFillSunFill size={20} />
+                          <BsMoonStarsFill size={20} />
                         </span>
                       ) : (
                         <span className="">
-                          <BsMoonStarsFill size={20} />
+                          <BsFillSunFill size={20} />
                         </span>
                       )}
                     </button>
