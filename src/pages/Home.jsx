@@ -6,9 +6,13 @@ import Section2 from "../components/Home/Section2";
 import FAQ from "../components/Home/FAQ";
 import Section3 from "../components/Home/Section3";
 import Footer from "../components/Footer";
-const Home2 = () => {
+import { useSelector } from "react-redux";
+
+const Home = () => {
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   return (
-    <div>
+    <div className={`${darkMode ? "dark" : ""}`}>
       <Hero />
       <Section1 />
       <Services />
@@ -21,4 +25,4 @@ const Home2 = () => {
   );
 };
 
-export default Home2;
+export default Home;
