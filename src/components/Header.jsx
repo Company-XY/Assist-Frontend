@@ -2,15 +2,25 @@ import { useState, useEffect } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { removeUser } from "../store/Slices/userSlice";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { Link as ScrollLink } from "react-scroll";
 import logo from "../assets/logo.png";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleDarkMode } from "../store/Slices/darkMode";
+import { BsMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [scrolling, setScrolling] = useState(false);
   const [nav, setNav] = useState(false);
+  const [darkIcon, setDarkIcon] = useState(false);
+
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
+  const handleDarkModeToggle = () => {
+    dispatch(toggleDarkMode());
+    setDarkIcon(!darkIcon);
+  };
 
   const isAuthenticated = localStorage.getItem("user") !== null;
 
@@ -21,8 +31,6 @@ const Header = () => {
   const userRole = user ? user.role : "";
   const userBalance = user ? user.balance : 0;
 
-  //console.log(userBalance);
-  //balance is still undefined
   const handleLogout = () => {
     dispatch(removeUser(user));
     navigate("/");
@@ -44,18 +52,34 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed w-full">
+    <header className={`fixed w-full ${darkMode ? "dark" : ""}`}>
       <nav className="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
         {isAuthenticated ? (
           <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
             {/* ----- User is authenticated--------------*/}
-            <RouterLink href="#" className="flex items-center">
+            <RouterLink to="/" className="flex items-center">
               <img src="" className="h-6 mr-3 sm:h-9" alt="" />
               <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
                 assist.africa
               </span>
             </RouterLink>
             <div className="flex items-center lg:order-2">
+              {/*------ DARK MODE ICON TOGGLE------*/}
+              <button
+                onClick={handleDarkModeToggle}
+                className="hidden md:flex text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+              >
+                {darkIcon ? (
+                  <span className="">
+                    <BsFillSunFill size={20} />
+                  </span>
+                ) : (
+                  <span className="">
+                    <BsMoonStarsFill size={20} />
+                  </span>
+                )}
+              </button>
+              {/*------ DARK MODE ICON TOGGLE------*/}
               <RouterLink
                 href="#"
                 className="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
@@ -105,7 +129,7 @@ const Header = () => {
             </div>
             <div
               className="items-center hidden justify-between w-full lg:flex lg:w-auto lg:order-1"
-              id="mobile-menu-2"
+              id="desktop-menu"
             >
               <ul
                 onClick={() => setNav(!nav)}
@@ -138,7 +162,7 @@ const Header = () => {
             </div>
             {nav && (
               <div
-                className="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
+                className="items-center justify-between flex w-full lg:flex lg:w-auto lg:order-1"
                 id="mobile-menu-2"
               >
                 <ul
@@ -168,6 +192,25 @@ const Header = () => {
                       Notifications: <span>0</span>
                     </p>
                   </li>
+                  <li className="grid place-items-center">
+                    {/*------ DARK MODE ICON TOGGLE------*/}
+                    <button
+                      onClick={handleDarkModeToggle}
+                      to="/login"
+                      className="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+                    >
+                      {darkIcon ? (
+                        <span className="">
+                          <BsFillSunFill size={20} />
+                        </span>
+                      ) : (
+                        <span className="">
+                          <BsMoonStarsFill size={20} />
+                        </span>
+                      )}
+                    </button>
+                    {/*------ DARK MODE ICON TOGGLE------*/}
+                  </li>
                 </ul>
               </div>
             )}
@@ -175,13 +218,29 @@ const Header = () => {
         ) : (
           <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
             {/*-------------User not authenticated--------------*/}
-            <a href="/" className="flex items-center">
+            <RouterLink to="/" className="flex items-center">
               <img src="" className="h-6 mr-3 sm:h-9" alt="" />
               <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
                 assist.africa
               </span>
-            </a>
+            </RouterLink>
             <div className="flex items-center lg:order-2">
+              {/*------ DARK MODE ICON TOGGLE------*/}
+              <button
+                onClick={handleDarkModeToggle}
+                className="hidden md:flex text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+              >
+                {darkIcon ? (
+                  <span className="">
+                    <BsFillSunFill size={20} />
+                  </span>
+                ) : (
+                  <span className="">
+                    <BsMoonStarsFill size={20} />
+                  </span>
+                )}
+              </button>
+              {/*------ DARK MODE ICON TOGGLE------*/}
               <RouterLink
                 to="/login"
                 className="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
@@ -345,6 +404,25 @@ const Header = () => {
                     >
                       Contact Us
                     </ScrollLink>
+                  </li>
+                  <li className="grid place-items-center">
+                    {/*------ DARK MODE ICON TOGGLE------*/}
+                    <button
+                      onClick={handleDarkModeToggle}
+                      to="/login"
+                      className="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+                    >
+                      {darkIcon ? (
+                        <span className="">
+                          <BsFillSunFill size={20} />
+                        </span>
+                      ) : (
+                        <span className="">
+                          <BsMoonStarsFill size={20} />
+                        </span>
+                      )}
+                    </button>
+                    {/*------ DARK MODE ICON TOGGLE------*/}
                   </li>
                 </ul>
               </div>
