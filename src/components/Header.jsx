@@ -306,6 +306,9 @@ const Header = () => {
                 <li>
                   <ScrollLink
                     to="Hero"
+                    smooth={true}
+                    duration={800}
+                    offset={-70}
                     className="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
                     aria-current="page"
                   >
@@ -314,7 +317,10 @@ const Header = () => {
                 </li>
                 <li>
                   <ScrollLink
-                    to="Hero"
+                    to="Section1"
+                    smooth={true}
+                    duration={800}
+                    offset={-70}
                     className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     About Us
@@ -323,6 +329,9 @@ const Header = () => {
                 <li>
                   <ScrollLink
                     to="Services"
+                    smooth={true}
+                    duration={800}
+                    offset={-70}
                     className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     Services
@@ -330,15 +339,10 @@ const Header = () => {
                 </li>
                 <li>
                   <ScrollLink
-                    to="Features"
-                    className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >
-                    Features
-                  </ScrollLink>
-                </li>
-                <li>
-                  <ScrollLink
                     to="Testimonials"
+                    smooth={true}
+                    duration={800}
+                    offset={-70}
                     className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     Our Team
@@ -346,7 +350,32 @@ const Header = () => {
                 </li>
                 <li>
                   <ScrollLink
+                    to="Section2"
+                    smooth={true}
+                    duration={800}
+                    offset={-70}
+                    className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  >
+                    Features
+                  </ScrollLink>
+                </li>
+                <li>
+                  <ScrollLink
+                    to="FAQ"
+                    smooth={true}
+                    duration={800}
+                    offset={-70}
+                    className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  >
+                    FAQ
+                  </ScrollLink>
+                </li>
+                <li>
+                  <ScrollLink
                     to="Footer"
+                    smooth={true}
+                    duration={800}
+                    offset={-70}
                     className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     Contact Us
@@ -366,6 +395,9 @@ const Header = () => {
                   <li>
                     <ScrollLink
                       to="Hero"
+                      smooth={true}
+                      duration={800}
+                      offset={-70}
                       className="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
                       aria-current="page"
                     >
@@ -374,7 +406,10 @@ const Header = () => {
                   </li>
                   <li>
                     <ScrollLink
-                      to="Hero"
+                      to="Section1"
+                      smooth={true}
+                      duration={800}
+                      offset={-70}
                       className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                     >
                       About Us
@@ -383,6 +418,9 @@ const Header = () => {
                   <li>
                     <ScrollLink
                       to="Services"
+                      smooth={true}
+                      duration={800}
+                      offset={-70}
                       className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                     >
                       Services
@@ -390,7 +428,10 @@ const Header = () => {
                   </li>
                   <li>
                     <ScrollLink
-                      to="Features"
+                      to="Section2"
+                      smooth={true}
+                      duration={800}
+                      offset={-70}
                       className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                     >
                       Features
@@ -398,7 +439,21 @@ const Header = () => {
                   </li>
                   <li>
                     <ScrollLink
+                      to="FAQ"
+                      smooth={true}
+                      duration={800}
+                      offset={-70}
+                      className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                    >
+                      FAQ
+                    </ScrollLink>
+                  </li>
+                  <li>
+                    <ScrollLink
                       to="Testimonials"
+                      smooth={true}
+                      duration={800}
+                      offset={-70}
                       className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                     >
                       Our Team
@@ -407,6 +462,9 @@ const Header = () => {
                   <li>
                     <ScrollLink
                       to="Footer"
+                      smooth={true}
+                      duration={800}
+                      offset={-70}
                       className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                     >
                       Contact Us

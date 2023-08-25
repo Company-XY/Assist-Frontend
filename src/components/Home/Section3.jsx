@@ -2,7 +2,7 @@ import React from "react";
 
 const Section3 = () => {
   return (
-    <section className="bg-gray-50 dark:bg-gray-800">
+    <section id="Section3" className="bg-gray-50 dark:bg-gray-800">
       <div className="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
         <div className="max-w-screen-sm mx-auto text-center">
           <h2 className="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">
