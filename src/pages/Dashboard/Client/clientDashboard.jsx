@@ -10,14 +10,14 @@ const clientDashboard = () => {
         <section className="w-full rounded-lg bg-purple-200">
           <Profile />
         </section>
+        <section>
+          <Actions />
+        </section>
         <section className="flex">
-          <div className="basis-1/5">
-            <Actions />
-          </div>
-          <div className="basis-3/5">
+          <div className="basis-2/3">
             <Jobs />
           </div>
-          <div className="basis-1/5">
+          <div className="basis-1/3">
             <Messages />
           </div>
         </section>

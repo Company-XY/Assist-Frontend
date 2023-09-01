@@ -2,7 +2,7 @@ import React from "react";
 
 const Messages = () => {
   return (
-    <div className="flex bg-gray-100">
+    <div className="flex mt-12 bg-gray-100">
       {/* Main message content */}
       <main className="w-full p-4">
         <div className="mb-4">

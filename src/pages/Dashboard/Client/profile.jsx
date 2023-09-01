@@ -3,7 +3,7 @@ import Avatar from "../../../assets/feature-1.jpg";
 
 const Profile = () => {
   const initialProfile = {
-    username: "Olosko23",
+    username: "User23",
     bio: "Bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi nostrum eveniet molestiae sed nesciunt fugiat sit fugit, reiciendis error accusantium odit dolores, in omnis quaerat necessitatibus at, veritatis qui praesentium.",
     rating: 4.5,
     openProjects: 0,
