@@ -59,14 +59,14 @@ const FreelancerRegister = () => {
   };
 
   return (
-    <main className="bg-cover bg-fixed px-5 md:px-10 py-5 flex justify-center items-center w-full h-full">
+    <main className="bg-cover bg-fixed px-5 md:px-10 mt-10 py-5 flex justify-center items-center w-full h-full">
       <section className="w-full max-w-3xl mx-auto bg-white mt-6 p-4 md:p-8 rounded-xl md:shadow-lg">
         <h2 className="text-center font-semibold text-2xl pb-2 mb-2">
           Enter correct credentials to join Assist Africa as a Freelancer
         </h2>
         <p className="py-2 mb-2">
           Register as a Client instead{" "}
-          <Link to="/register/client" className="font-semibold">
+          <Link to="/register/client" className="font-semibold text-purple-800">
             Here
           </Link>
         </p>

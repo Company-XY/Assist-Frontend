@@ -4,10 +4,11 @@ import { removeUser } from "../store/Slices/userSlice";
 import { useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import light_logo from "../assets/transparent_logo.png";
-import dark_logo from "../assets/dark_logo.png";
+//import dark_logo from "../assets/dark_logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleDarkMode } from "../store/Slices/darkMode";
 import { BsMoonStarsFill, BsFillSunFill } from "react-icons/bs";
+import { BiUserCircle } from "react-icons/bi";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -30,8 +31,7 @@ const Header = () => {
   const user = isAuthenticated
     ? JSON.parse(localStorage.getItem("user"))
     : null;
-  const userEmail = user ? user.email : "";
-  const userRole = user ? user.role : "";
+  const userName = user ? user.name : "";
   const userBalance = user ? user.balance : 0;
 
   const handleLogout = () => {
@@ -64,12 +64,12 @@ const Header = () => {
         {isAuthenticated ? (
           <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
             {/* ----- User is authenticated--------------*/}
-            <RouterLink to="/" className="flex items-center">
+            <div className="flex items-center cursor-pointer">
               <img src="" className="h-6 mr-3 sm:h-9" alt="" />
               <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
                 assist.africa
               </span>
-            </RouterLink>
+            </div>
             <div className="flex items-center lg:order-2">
               {/*------ DARK MODE ICON TOGGLE------*/}
               <button
@@ -89,7 +89,7 @@ const Header = () => {
               {/*------ DARK MODE ICON TOGGLE------*/}
               <RouterLink
                 href="#"
-                className="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+                className="text-gray-800 hidden sm:flex dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
               >
                 Profile
               </RouterLink>
@@ -143,26 +143,17 @@ const Header = () => {
                 className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
               >
                 <li>
-                  <p
-                    className="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
-                    aria-current="page"
-                  >
-                    User : <span>{userRole}</span>
+                  <p className="flex gap-2 py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                    <span className="grid place-items-center cursor-pointer">
+                      {" "}
+                      <BiUserCircle size={25} />{" "}
+                    </span>{" "}
+                    <span className="cursor-pointer">{userName}</span>
                   </p>
                 </li>
                 <li>
-                  <p className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
-                    Email : <span>{userEmail}</span>
-                  </p>
-                </li>
-                <li>
-                  <p className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
-                    Balance : <span>0 {userBalance}</span>
-                  </p>
-                </li>
-                <li>
-                  <p className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
-                    Notifications: <span>0</span>
+                  <p className="block cursor-pointer py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                    Balance : <span>0 {userBalance} USD</span>
                   </p>
                 </li>
               </ul>
@@ -177,26 +168,21 @@ const Header = () => {
                   className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
                 >
                   <li>
-                    <p
-                      className="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
-                      aria-current="page"
+                    <RouterLink
+                      href="#"
+                      className="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
                     >
-                      User : <span>{userRole}</span>
+                      Profile
+                    </RouterLink>
+                  </li>
+                  <li>
+                    <p className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                      <span>{userName}</span>
                     </p>
                   </li>
                   <li>
                     <p className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
-                      Email : <span>{userEmail}</span>
-                    </p>
-                  </li>
-                  <li>
-                    <p className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
-                      Balance : <span>0 {userBalance}</span>
-                    </p>
-                  </li>
-                  <li>
-                    <p className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
-                      Notifications: <span>0</span>
+                      Balance : <span>0 {userBalance} USD</span>
                     </p>
                   </li>
                   <li className="grid place-items-center">
@@ -204,7 +190,7 @@ const Header = () => {
                     <button
                       onClick={handleDarkModeToggle}
                       to="/login"
-                      className="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+                      className="text-gray-800 flex justify-start dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
                     >
                       {darkIcon ? (
                         <span className="">
@@ -226,11 +212,7 @@ const Header = () => {
           <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
             {/*-------------User not authenticated--------------*/}
             <RouterLink to="/" className="flex items-center">
-              <img
-                src={logo ? dark_logo : light_logo}
-                className="h-5 sm:h-6 md:h-8"
-                alt=""
-              />
+              <img src={light_logo} className="h-5 sm:h-6 md:h-8" alt="" />
               <span className="hidden self-center text-xl font-semibold whitespace-nowrap dark:text-white">
                 assist.africa
               </span>
@@ -343,28 +325,6 @@ const Header = () => {
                 </li>
                 <li>
                   <ScrollLink
-                    to="Testimonials"
-                    smooth={true}
-                    duration={800}
-                    offset={-70}
-                    className="block cursor-pointer py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >
-                    Our Team
-                  </ScrollLink>
-                </li>
-                <li>
-                  <ScrollLink
-                    to="Section2"
-                    smooth={true}
-                    duration={800}
-                    offset={-70}
-                    className="block cursor-pointer py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >
-                    Features
-                  </ScrollLink>
-                </li>
-                <li>
-                  <ScrollLink
                     to="FAQ"
                     smooth={true}
                     duration={800}
@@ -432,17 +392,6 @@ const Header = () => {
                   </li>
                   <li>
                     <ScrollLink
-                      to="Section2"
-                      smooth={true}
-                      duration={800}
-                      offset={-70}
-                      className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                    >
-                      Features
-                    </ScrollLink>
-                  </li>
-                  <li>
-                    <ScrollLink
                       to="FAQ"
                       smooth={true}
                       duration={800}
@@ -450,17 +399,6 @@ const Header = () => {
                       className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                     >
                       FAQ
-                    </ScrollLink>
-                  </li>
-                  <li>
-                    <ScrollLink
-                      to="Testimonials"
-                      smooth={true}
-                      duration={800}
-                      offset={-70}
-                      className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                    >
-                      Our Team
                     </ScrollLink>
                   </li>
                   <li>
