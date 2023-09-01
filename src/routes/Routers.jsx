@@ -7,6 +7,8 @@ import Dashboard from "../pages/Dashboard/dashboard";
 import Register from "../pages/Register/Register";
 import Reset from "../pages/Reset";
 import Password from "../pages/Password";
+import PostJob from "../pages/Dashboard/Client/postProject";
+import BookConsultation from "../pages/Dashboard/Client/bookConsultation";
 
 function Routers() {
   return (
@@ -17,6 +19,8 @@ function Routers() {
       <Route path="/register/client" element={<ClientRegister />} />
       <Route path="/register/freelancer" element={<FreelancerRegister />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/dashboard/post" element={<PostJob />} />
+      <Route path="/dashboard/consultation" element={<BookConsultation />} />
       <Route path="/reset" element={<Reset />} />
       <Route path="/password/:token" element={<Password />} />
     </Routes>

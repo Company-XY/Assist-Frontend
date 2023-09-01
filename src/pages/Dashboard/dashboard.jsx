@@ -3,8 +3,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { setUser } from "../../store/Slices/userSlice";
-import Client from "./clientDashboard";
-import Freelancer from "./freelancerDashboard";
+import Client from "./Client/clientDashboard";
+import Freelancer from "./Freelancer/freelancerDashboard";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
