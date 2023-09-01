@@ -19,28 +19,28 @@ const Register = () => {
         </p>
         <section className="flex flex-col gap-6 justify-center md:flex-row md:justify-evenly">
           <Link to="/register/client">
-            <div className="border rounded-lg hover:text-white transition-all duration-300 hover:bg-purple-800">
-              <div className="bg-gray-100 p-6">
+            <div className="border rounded-lg">
+              <div className="bg-snow-100 hover:bg-purple-400 p-6">
                 <h2 className="font-semibold text-lg mb-2">
-                  Looking for experts in Virtual Assistance
+                  Looking to hire or consult experts
                 </h2>
                 <p className="text-gray-600">{/* Your description */}</p>
               </div>
-              <div className="bg-gray-200 p-4 flex justify-between items-center">
+              <div className="bg-snow-200 hover:bg-purple-600 p-4 flex justify-between items-center">
                 <span>Get Started</span>
                 <FaArrowRight className="transform group-hover:-rotate-90 transition-all duration-300" />
               </div>
             </div>
           </Link>
           <Link to="/register/freelancer">
-            <div className="border rounded-lg hover:bg-purple-800 hover:text-white transition-all duration-300">
-              <div className="bg-gray-100 p-6">
+            <div className="border rounded-lg">
+              <div className="bg-snow-100 hover:bg-purple-400 p-6">
                 <h2 className="font-semibold text-lg mb-2">
                   Looking for work as a Virtual Assistant
                 </h2>
                 <p className="text-gray-600">{/* Your description */}</p>
               </div>
-              <div className="bg-gray-200 p-4 flex justify-between items-center">
+              <div className="bg-snow-200 hover:bg-purple-600 p-4 flex justify-between items-center">
                 <span>Get Started</span>
                 <FaArrowRight className="transform group-hover:-rotate-90 transition-all duration-300" />
               </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -19,8 +20,8 @@ const Services = () => {
           </p>
           <div className="pt-6 mt-6 space-y-4 border-t border-gray-200 dark:border-gray-700">
             <div>
-              <a
-                href="#"
+              <Link
+                to="*"
                 className="inline-flex items-center text-base font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 dark:hover:text-purple-700"
               >
                 Explore our terms and conditions
@@ -36,11 +37,11 @@ const Services = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-              </a>
+              </Link>
             </div>
             <div>
-              <a
-                href="#"
+              <Link
+                to="*"
                 className="inline-flex items-center text-base font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 dark:hover:text-purple-700"
               >
                 Read more
@@ -56,7 +57,7 @@ const Services = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

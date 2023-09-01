@@ -121,37 +121,35 @@ const FreelancerDashboard = () => {
 
       {/* Display filtered jobs */}
       <div className="flex flex-col items-center overflow-hidden justify-center gap-4 max-w-6xl mx-auto">
-        {filteredJobs.map(
-          ({ _id, title, description, budget, skills, createdAt }) => (
-            <div
-              key={_id}
-              className="bg-white cursor-pointer p-4 rounded-md shadow-md w-2/3 my-2 hover:bg-blue-300"
-            >
-              <span className="flex justify-between">
-                <h2 className="text-xl font-semibold">{title}</h2>
-                <p className="bg-blue-400 px-2 py-1 rounded-lg">
-                  <span>{calculateTimeAgo(createdAt)}</span>
-                </p>
+        {job.map(({ _id, title, description, budget, skills, createdAt }) => (
+          <div
+            key={_id}
+            className="bg-white cursor-pointer p-4 rounded-md shadow-md w-2/3 my-2 hover:bg-blue-300"
+          >
+            <span className="flex justify-between">
+              <h2 className="text-xl font-semibold">{title}</h2>
+              <p className="bg-blue-400 px-2 py-1 rounded-lg">
+                <span>{calculateTimeAgo(createdAt)}</span>
+              </p>
+            </span>
+            <p className="mt-2 text-gray-600">{description}</p>
+            <div className="flex items-center mt-4">
+              <span className="bg-blue-500 text-white py-1 px-2 rounded-md text-sm">
+                Budget: ${budget}
               </span>
-              <p className="mt-2 text-gray-600">{description}</p>
-              <div className="flex items-center mt-4">
-                <span className="bg-blue-500 text-white py-1 px-2 rounded-md text-sm">
-                  Budget: ${budget}
-                </span>
-                <div className="ml-auto">
-                  {skills.map((skill, _id) => (
-                    <span
-                      key={_id}
-                      className="bg-gray-200 text-gray-600 py-1 px-2 rounded-md text-xs ml-2"
-                    >
-                      {skill.label}
-                    </span>
-                  ))}
-                </div>
+              <div className="ml-auto">
+                {skills.map((skill, _id) => (
+                  <span
+                    key={_id}
+                    className="bg-gray-200 text-gray-600 py-1 px-2 rounded-md text-xs ml-2"
+                  >
+                    {skill.label}
+                  </span>
+                ))}
               </div>
             </div>
-          )
-        )}
+          </div>
+        ))}
       </div>
     </div>
   );

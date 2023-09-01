@@ -22,9 +22,9 @@ const Reset = () => {
   };
 
   return (
-    <main className="bg-cover bg-fixed px-5 md:px-10 py-5 grid place-items-center w-full h-[90vh]">
-      <section className="max-w-3xl mx-auto">
-        <h2 className="text-center text-lg md:text-2xl pb-2 mb-2">
+    <main className="bg-cover bg-fixed px-5 md:px-10 py-5 grid place-items-center sm:bg-gray-100 w-full h-screen">
+      <section className="mx-auto w-full max-w-md bg-white p-8 rounded-lg sm:shadow-md md:w-2/3 lg:w-1/2">
+        <h2 className="text-center text-lg md:text-2xl pb-2 mb-2 font-semibold">
           Enter your correct email address to reset password
         </h2>
         <form onSubmit={handleResetPassword}>
@@ -36,7 +36,7 @@ const Reset = () => {
               Email Address
             </label>
             <input
-              className="px-4 py-2 border rounded-lg focus:outline-none focus-ring focus:border-blue-500"
+              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-purple-500 mb-2"
               type="email"
               required
               placeholder=""
@@ -47,7 +47,7 @@ const Reset = () => {
           <div className="w-full text-center grid place-items-center mt-2 pt-2">
             <button
               type="submit"
-              className="bg-white w-full flex justify-center items-center text-blue-500 py-2 px-6 rounded-full text-lg md:text-xl font-semibold hover:bg-blue-600 hover:text-white focus:ring-2 focus:ring-blue-500 transition duration-300"
+              className="bg-white w-full flex justify-center items-center text-purple-500 py-2 px-6 rounded-full text-lg md:text-xl font-semibold hover:bg-purple-600 hover:text-white focus:ring-2 focus:ring-purple-500 transition duration-300"
             >
               <span className="flex text-center">
                 <span className="items-center">Reset Password</span>

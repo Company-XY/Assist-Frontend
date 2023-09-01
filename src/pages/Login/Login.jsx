@@ -48,8 +48,8 @@ const Login = () => {
   };
 
   return (
-    <main className="w-full h-screen flex justify-center items-center bg-gray-100">
-      <section className="w-full max-w-md bg-white p-8 rounded-lg shadow-md md:w-2/3 lg:w-1/2">
+    <main className="w-full h-screen flex justify-center items-center sm:bg-gray-100">
+      <section className="w-full max-w-md bg-white p-8 rounded-lg sm:shadow-md md:w-2/3 lg:w-1/2">
         <h2 className="text-center font-semibold text-3xl mb-6">
           Enter correct credentials to login
         </h2>
