@@ -26,7 +26,7 @@ const Messages = () => {
             </div>
           </div>
 
-          {/* Message input */}
+          {/* input */}
           <div className="p-4 border-t border-gray-300">
             <input
               type="text"
