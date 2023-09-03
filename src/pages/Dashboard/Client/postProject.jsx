@@ -125,7 +125,7 @@ const PostProject = () => {
             <div className="flex flex-col">
               <label>Any additional information from the files uploaded</label>
               <input type="text" placeholder="Timeline" />
-            </div>{" "}
+            </div>
             <div className="flex flex-col">
               <label>Upload any relevant files</label>
               <input type="file" />
@@ -172,7 +172,6 @@ const PostProject = () => {
 
   const handleSubmit = () => {
     // Add logic to send each piece of data individually
-    // Example: Send project title, then project description, and so on
     console.log("Data sent successfully!");
   };
 
