@@ -61,7 +61,7 @@ const MyJobs = () => {
 
   return (
     <div className="p-4">
-      <h2 className="text-2xl font-semibold mb-4">My Jobs</h2>
+      <h2 className="text-2xl font-semibold mb-4">My Projects</h2>
       <div className="flex space-x-4">
         <button
           onClick={() => handleTabClick("open")}

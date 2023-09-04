@@ -10,7 +10,6 @@ const Profile = () => {
     activeProjects: 0,
     pastProjects: 0,
     totalProjects: 0,
-    status: "Online",
     location: "Nairobi, Kenya",
     joinedDate: "August 2023",
     recommendations: 0,
@@ -76,7 +75,6 @@ const Profile = () => {
           )}
         </div>
         <div className="text-center mt-4">
-          <h2>Status: {profile.status}</h2>
           <h2>{profile.location}</h2>
           <h2>Joined {profile.joinedDate}</h2>
           <h2>{profile.recommendations} Recommendations</h2>
