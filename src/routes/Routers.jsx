@@ -11,6 +11,7 @@ import PostJob from "../pages/Dashboard/Client/postProject";
 import BookConsultation from "../pages/Dashboard/Client/bookConsultation";
 import Call from "../pages/Dashboard/Client/call";
 import Details from "../pages/Dashboard/Client/details";
+import OnboardingSteps from "../pages/Dashboard/Freelancer/onboarding";
 
 function Routers() {
   return (
@@ -25,6 +26,10 @@ function Routers() {
       <Route path="/dashboard/consultation" element={<BookConsultation />} />
       <Route path="/dashboard/consultation/details" element={<Details />} />
       <Route path="/dashboard/consultation/call" element={<Call />} />
+      <Route
+        path="/dashboard/freelancer/onboarding"
+        element={<OnboardingSteps />}
+      />
       <Route path="/reset" element={<Reset />} />
       <Route path="/password/:token" element={<Password />} />
     </Routes>
