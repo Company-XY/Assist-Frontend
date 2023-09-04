@@ -9,6 +9,8 @@ import Reset from "../pages/Reset";
 import Password from "../pages/Password";
 import PostJob from "../pages/Dashboard/Client/postProject";
 import BookConsultation from "../pages/Dashboard/Client/bookConsultation";
+import Call from "../pages/Dashboard/Client/call";
+import Details from "../pages/Dashboard/Client/details";
 
 function Routers() {
   return (
@@ -21,6 +23,8 @@ function Routers() {
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/dashboard/post" element={<PostJob />} />
       <Route path="/dashboard/consultation" element={<BookConsultation />} />
+      <Route path="/dashboard/consultation/details" element={<Details />} />
+      <Route path="/dashboard/consultation/call" element={<Call />} />
       <Route path="/reset" element={<Reset />} />
       <Route path="/password/:token" element={<Password />} />
     </Routes>

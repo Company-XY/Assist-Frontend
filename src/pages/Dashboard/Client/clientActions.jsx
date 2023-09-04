@@ -22,7 +22,7 @@ const clientActions = () => {
           onClick={consult}
           className="bg-purple-800 text-white px-4 py-2 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600 transition duration-300 ease-in-out"
         >
-          Book Consultation
+          Get Guidance
         </button>
       </div>
     </div>
