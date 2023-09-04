@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const PostProject = () => {
   const prServices = [
@@ -23,6 +24,13 @@ const PostProject = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedService, setSelectedService] = useState("");
   const [filteredServices, setFilteredServices] = useState(prServices);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [PR_service, setPR_service] = useState("");
+  const [skills, setSkills] = useState({});
+  const [budget, setBudget] = useState("");
+  const [duration, setDuration] = useState("");
+  const [files, setFiles] = useState("");
 
   const handleServiceSelect = (event) => {
     setSelectedService(event.target.value);
@@ -34,10 +42,10 @@ const PostProject = () => {
       service.toLowerCase().includes(query)
     );
     setFilteredServices(filtered);
-    setSelectedService(query); // This will update the input field with the selected value
+    setSelectedService(query);
   };
 
-  const totalSteps = 5; // Set the total number of steps here
+  const totalSteps = 5;
 
   const handleNextStep = () => {
     if (currentStep < totalSteps) {
@@ -48,6 +56,34 @@ const PostProject = () => {
   const handlePrevStep = () => {
     if (currentStep > 1) {
       setCurrentStep(currentStep - 1);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(
+        "https://auth-server-0bsp.onrender.com/api/v1/jobs",
+        {
+          title,
+          PR_service,
+          description,
+          user_email,
+          skills,
+          budget,
+          duration,
+          files,
+        }
+      );
+
+      const user = response.data;
+      setIsLoading(false);
+      dispatch(setUser(user));
+      navigate("/dashboard");
+    } catch (error) {
+      setError(error.response.data.message);
+      setIsLoading(false);
     }
   };
 
@@ -79,7 +115,7 @@ const PostProject = () => {
                 type="text"
                 id="prService"
                 placeholder="Search or Select..."
-                value={selectedService}
+                value={PR_service}
                 onChange={handleSearch}
               />
               <select
@@ -112,7 +148,9 @@ const PostProject = () => {
               <input
                 className="border-2 border-purple-800 rounded-lg h-10 py-2 px-4"
                 type="text"
+                value={title}
                 placeholder="Title"
+                onChange={(e) => setTitle(e.target.value)}
               />
             </div>
             <div className="flex flex-col mb-4">
@@ -128,9 +166,11 @@ const PostProject = () => {
             <div className="flex flex-col mb-4">
               <label>Describe the project and what you want done</label>
               <textarea
+                value={description}
                 className="border-2 rounded-lg py-2border-2 border-purple-800 h-40 py-2 px-4"
                 type="text"
                 placeholder="Details..."
+                onChange={(e) => setDescription(e.target.value)}
               />
             </div>
             <button
@@ -154,14 +194,20 @@ const PostProject = () => {
             <div className="flex flex-col mb-4">
               <label>How long should the project take (Days)</label>
               <input
+                value={duration}
                 className="border-2 border-purple-800 rounded-lg h-10 py-2 px-4"
                 type="Number"
                 placeholder="Timeline"
+                onChange={(e) => setDuration(e.target.value)}
               />
             </div>
             <div className="flex flex-col mb-4">
               <label>What is your budge</label>
-              <select className="border-2 border-purple-800 rounded-lg h-10 py-2 px-4">
+              <select
+                value={budget}
+                onChange={(e) => setBudget(e.target.value)}
+                className="border-2 border-purple-800 rounded-lg h-10 py-2 px-4"
+              >
                 <option>Below 5000</option>
                 <option>5000 - 15000</option>
                 <option>15000 - 35000</option>
@@ -198,8 +244,10 @@ const PostProject = () => {
             <div className="flex flex-col mb-4">
               <label>Upload any relevant files</label>
               <input
+                value={files}
                 className="border-2 border-purple-800 rounded-lg h-12 py-2 px-4"
                 type="file"
+                onChange={(e) => setFiles(e.target.value)}
               />
             </div>{" "}
             <button
@@ -240,10 +288,6 @@ const PostProject = () => {
       default:
         return null;
     }
-  };
-
-  const handleSubmit = () => {
-    console.log("Data sent successfully!");
   };
 
   const handleGoBack = () => {
