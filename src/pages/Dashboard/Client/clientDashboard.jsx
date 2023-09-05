@@ -8,16 +8,18 @@ const clientDashboard = () => {
     <>
       <main className="p-2 flex flex-col">
         <section className="w-full rounded-lg bg-purple-200">
-          <Profile />
+            <Profile />
         </section>
-        <section>
+        <section className="w-full">
           <Actions />
         </section>
-        <section className="flex">
-          <div className="basis-2/3">
-            <Jobs />
+        <section className="flex flex-col md:flex-row space-x-4">
+          <div className="basis-2/3 md:w-2/3 w-full">
+          <div className="overflow-hidden">
+              <Jobs />
+            </div>
           </div>
-          <div className="basis-1/3">
+          <div className="basis-1/3 md:w-2/3 w-full">
             <Messages />
           </div>
         </section>

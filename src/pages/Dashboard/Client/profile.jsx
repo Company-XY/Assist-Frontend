@@ -56,9 +56,9 @@ const Profile = () => {
   };
 
   return (
-    <div className="bg-snow-300 text-gray-800 p-4 flex">
+    <div className="bg-snow-300 text-gray-800 p-4 flex flex-col md:flex-row">
       {/* Avatar Section */}
-      <div className="w-1/3">
+      <div className="w-full">
         <div className="w-52 mx-auto">
           <img
             className="h-40 w-full object-cover rounded-full"
@@ -74,7 +74,7 @@ const Profile = () => {
             />
           )}
         </div>
-        <div className="text-center mt-4">
+        <div className="text-center md:text-center mt-4">
           <h2>{profile.location}</h2>
           <h2>Joined {profile.joinedDate}</h2>
           <h2>{profile.recommendations} Recommendations</h2>
@@ -82,7 +82,7 @@ const Profile = () => {
       </div>
 
       {/* Details Section */}
-      <div className="w-2/3 border-gray-300 p-4">
+      <div className="w-full border-gray-300 p-4">
         {isEditing ? (
           /* Edit Mode */
           <div>
