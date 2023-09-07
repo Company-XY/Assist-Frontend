@@ -6,7 +6,7 @@ const Services = () => {
     <section id="Services" className="bg-white dark:bg-gray-900">
       <div className="items-center max-w-screen-xl px-4 py-8 mx-auto lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-24 lg:px-6">
         <div className="col-span-2 mb-8">
-          <p className="text-lg font-medium text-purple-600 dark:text-purple-500">
+          <p className="text-lg font-medium text-blue-600 dark:text-blue-500">
             {" "}
             Our Services
           </p>
@@ -22,7 +22,7 @@ const Services = () => {
             <div>
               <Link
                 to="*"
-                className="inline-flex items-center text-base font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 dark:hover:text-purple-700"
+                className="inline-flex items-center text-base font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700"
               >
                 Explore our terms and conditions
                 <svg
@@ -42,7 +42,7 @@ const Services = () => {
             <div>
               <Link
                 to="*"
-                className="inline-flex items-center text-base font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 dark:hover:text-purple-700"
+                className="inline-flex items-center text-base font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700"
               >
                 Read more
                 <svg
@@ -64,7 +64,7 @@ const Services = () => {
         <div className="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
           <div>
             <svg
-              className="w-10 h-10 mb-2 text-purple-600 md:w-12 md:h-12 dark:text-purple-500"
+              className="w-10 h-10 mb-2 text-blue-600 md:w-12 md:h-12 dark:text-blue-500"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +84,7 @@ const Services = () => {
           </div>
           <div>
             <svg
-              className="w-10 h-10 mb-2 text-purple-600 md:w-12 md:h-12 dark:text-purple-500"
+              className="w-10 h-10 mb-2 text-blue-600 md:w-12 md:h-12 dark:text-blue-500"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +100,7 @@ const Services = () => {
           </div>
           <div>
             <svg
-              className="w-10 h-10 mb-2 text-purple-600 md:w-12 md:h-12 dark:text-purple-500"
+              className="w-10 h-10 mb-2 text-blue-600 md:w-12 md:h-12 dark:text-blue-500"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +120,7 @@ const Services = () => {
           </div>
           <div>
             <svg
-              className="w-10 h-10 mb-2 text-purple-600 md:w-12 md:h-12 dark:text-purple-500"
+              className="w-10 h-10 mb-2 text-blue-600 md:w-12 md:h-12 dark:text-blue-500"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"

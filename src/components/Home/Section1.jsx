@@ -22,7 +22,7 @@ const Section1 = () => {
             >
               <li className="flex space-x-3">
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  className="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ const Section1 = () => {
               </li>
               <li className="flex space-x-3">
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  className="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ const Section1 = () => {
               </li>
               <li className="flex space-x-3">
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  className="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +104,7 @@ const Section1 = () => {
             >
               <li className="flex space-x-3">
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  className="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +121,7 @@ const Section1 = () => {
               </li>
               <li className="flex space-x-3">
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  className="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +139,7 @@ const Section1 = () => {
               </li>
               <li className="flex space-x-3">
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  className="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +156,7 @@ const Section1 = () => {
               </li>
               <li className="flex space-x-3">
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  className="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
