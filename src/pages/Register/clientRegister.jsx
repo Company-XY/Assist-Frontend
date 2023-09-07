@@ -29,13 +29,12 @@ const ClientRegister = () => {
     if (password === password2) {
       try {
         const response = await axios.post(
-          "https://auth-server-0bsp.onrender.com/api/v1/register/client",
+          "https://assist-api-okgk.onrender.com/api/v1/register/client",
           {
             type,
             name,
             email,
             password,
-            consultation,
           }
         );
 
@@ -65,7 +64,10 @@ const ClientRegister = () => {
         </h2>
         <p className="py-2 mb-2">
           Register as a Freelancer instead{" "}
-          <Link to="/register/freelancer" className="font-semibold text-purple-800">
+          <Link
+            to="/register/freelancer"
+            className="font-semibold text-purple-800"
+          >
             Here
           </Link>
         </p>
@@ -78,8 +80,8 @@ const ClientRegister = () => {
               required
               onChange={(e) => setType(e.target.value)}
             >
-              <option value="Individual">Individual</option>
-              <option value="Business">Business</option>
+              <option value="Individual Client">Individual</option>
+              <option value="Business Client">Business</option>
             </select>
           </div>
           <div className="flex flex-col gap-2 my-2">
@@ -107,20 +109,6 @@ const ClientRegister = () => {
               placeholder=""
               onChange={(e) => setEmail(e.target.value)}
             />
-          </div>
-          <div className="my-3 py-2 flex flex-col gap-2">
-            <label className="font-semibold">
-              Do you Need Consultation services
-            </label>
-            <select
-              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-purple-500 mb-2"
-              value={consultation}
-              required
-              onChange={(e) => setConsultation(e.target.value === "true")}
-            >
-              <option value={true}>Yes</option>
-              <option value={false}>No</option>
-            </select>
           </div>
           <div className="flex flex-col gap-2 py-2">
             <label className="flex gap-2 mt-2 font-semibold" htmlFor="password">
