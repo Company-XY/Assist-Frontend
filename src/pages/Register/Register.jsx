@@ -20,13 +20,13 @@ const Register = () => {
         <section className="flex flex-col gap-6 justify-center md:flex-row md:justify-evenly">
           <Link to="/register/client">
             <div className="border rounded-lg">
-              <div className="bg-snow-100 hover:bg-purple-400 p-6">
+              <div className="bg-snow-100 hover:bg-blue-400 p-6">
                 <h2 className="font-semibold text-lg mb-2">
                   Looking to hire or consult experts
                 </h2>
                 <p className="text-gray-600">{/* Your description */}</p>
               </div>
-              <div className="bg-snow-200 hover:bg-purple-600 p-4 flex justify-between items-center">
+              <div className="bg-snow-200 hover:bg-blue-600 p-4 flex justify-between items-center">
                 <span>Get Started</span>
                 <FaArrowRight className="transform group-hover:-rotate-90 transition-all duration-300" />
               </div>
@@ -34,13 +34,13 @@ const Register = () => {
           </Link>
           <Link to="/register/freelancer">
             <div className="border rounded-lg">
-              <div className="bg-snow-100 hover:bg-purple-400 p-6">
+              <div className="bg-snow-100 hover:bg-blue-400 p-6">
                 <h2 className="font-semibold text-lg mb-2">
                   Looking for work as a Virtual Assistant
                 </h2>
                 <p className="text-gray-600">{/* Your description */}</p>
               </div>
-              <div className="bg-snow-200 hover:bg-purple-600 p-4 flex justify-between items-center">
+              <div className="bg-snow-200 hover:bg-blue-600 p-4 flex justify-between items-center">
                 <span>Get Started</span>
                 <FaArrowRight className="transform group-hover:-rotate-90 transition-all duration-300" />
               </div>

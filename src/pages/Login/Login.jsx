@@ -49,7 +49,7 @@ const Login = () => {
 
   return (
     <main className="w-full h-screen flex justify-center items-center sm:bg-gray-100">
-      <section className="w-full max-w-md bg-white p-8 rounded-lg sm:shadow-md md:w-2/3 lg:w-1/2">
+      <section className="w-auto max-w-md bg-snow p-8 rounded-lg sm:shadow-md md:w-2/3 lg:w-1/2 mt-20">
         <h2 className="text-center font-semibold text-3xl mb-6">
           Enter correct credentials to login
         </h2>
@@ -64,7 +64,7 @@ const Login = () => {
               value={email}
               required
               placeholder="Email"
-              className="px-4 py-2 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-purple-800 hover:border-purple-300"
+              className="px-4 py-2 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-800 hover:border-blue-300"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -78,7 +78,7 @@ const Login = () => {
               value={password}
               required
               placeholder="Password"
-              className="px-4 py-2 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-purple-800"
+              className="px-4 py-2 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-800"
               onChange={(e) => setPassword(e.target.value)}
             />
             <div className="mt-2">
@@ -88,8 +88,8 @@ const Login = () => {
                   checked={showPass}
                   onChange={handleShowPassChange}
                   className={`${
-                    showPass ? "text-purple-800" : "text-black"
-                  } appearance-none h-6 w-6 border border-gray-300 rounded-md checked:bg-purple-800 checked:border-transparent focus:outline-none`}
+                    showPass ? "text-blue-800" : "text-black"
+                  } appearance-none h-6 w-6 border border-gray-300 rounded-md checked:bg-blue-800 checked:border-transparent focus:outline-none`}
                 />
                 Show Password
               </label>
@@ -99,7 +99,7 @@ const Login = () => {
           <div className="w-full text-center">
             <button
               type="submit"
-              className="w-full bg-purple-700 hover:bg-purple-800 text-white font-medium py-2 rounded-lg"
+              className="w-full bg-blue-700 hover:bg-blue-800 text-white font-medium py-2 rounded-lg"
             >
               {isLoading ? "Please Wait" : "Login"}
             </button>
@@ -108,13 +108,13 @@ const Login = () => {
         <div className="mt-6 text-center">
           <p>
             Forgot Password? Reset{" "}
-            <Link to="/reset" className="text-purple-900">
+            <Link to="/reset" className="text-blue-900">
               Here
             </Link>
           </p>
           <p>
             New to Assist Africa? Signup{" "}
-            <Link to="/register" className="text-purple-900">
+            <Link to="/register" className="text-blue-900">
               Here
             </Link>
           </p>

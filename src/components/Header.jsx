@@ -60,7 +60,7 @@ const Header = () => {
         scrolling ? "bg-gray-50" : ""
       }`}
     >
-      <nav className="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
+      <nav className="bg-snow border-gray-200 py-2.5 dark:bg-gray-900">
         {isAuthenticated ? (
           <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
             {/* ----- User is authenticated--------------*/}
@@ -242,7 +242,7 @@ const Header = () => {
               </RouterLink>
               <RouterLink
                 to="/register"
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-purple-800"
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
               >
                 Register
               </RouterLink>

@@ -65,7 +65,7 @@ const ClientRegister = () => {
         </h2>
         <p className="py-2 mb-2">
           Register as a Freelancer instead{" "}
-          <Link to="/register/freelancer" className="font-semibold text-purple-800">
+          <Link to="/register/freelancer" className="font-semibold text-blue-800">
             Here
           </Link>
         </p>
@@ -73,7 +73,7 @@ const ClientRegister = () => {
           <div className="flex flex-col gap-2 py-2 mb-2">
             <label className="font-semibold">Account Type</label>
             <select
-              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-purple-500 mb-2"
+              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-blue-500 mb-2"
               value={type}
               required
               onChange={(e) => setType(e.target.value)}
@@ -88,7 +88,7 @@ const ClientRegister = () => {
               Username
             </label>
             <input
-              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-purple-500 mb-2"
+              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-blue-500 mb-2"
               type="text"
               required
               placeholder=""
@@ -101,7 +101,7 @@ const ClientRegister = () => {
               Email Address
             </label>
             <input
-              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-purple-500 mb-2"
+              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-blue-500 mb-2"
               type="email"
               required
               placeholder=""
@@ -113,7 +113,7 @@ const ClientRegister = () => {
               Do you Need Consultation services
             </label>
             <select
-              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-purple-500 mb-2"
+              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-blue-500 mb-2"
               value={consultation}
               required
               onChange={(e) => setConsultation(e.target.value === "true")}
@@ -128,7 +128,7 @@ const ClientRegister = () => {
               Password
             </label>
             <input
-              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-purple-500 mb-2"
+              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-blue-500 mb-2"
               type={showPass ? "text" : "password"}
               required
               placeholder=""
@@ -141,7 +141,7 @@ const ClientRegister = () => {
               Confirm Password
             </label>
             <input
-              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-purple-500 mb-2"
+              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-blue-500 mb-2"
               type={showPass ? "text" : "password"}
               required
               placeholder=""
@@ -157,8 +157,8 @@ const ClientRegister = () => {
               checked={showPass}
               onChange={handleShowPassChange}
               className={`${
-                showPass ? "text-purple-800" : "text-black"
-              } appearance-none h-6 w-6 border border-gray-300 rounded-md checked:bg-purple-800 checked:border-transparent focus:outline-none`}
+                showPass ? "text-blue-800" : "text-black"
+              } appearance-none h-6 w-6 border border-gray-300 rounded-md checked:bg-blue-800 checked:border-transparent focus:outline-none`}
             />
           </div>
           <p className="text-red-400 py-2 my-2">{error}</p>
@@ -166,7 +166,7 @@ const ClientRegister = () => {
           <div className="w-full text-center grid place-items-center">
             <button
               type="submit"
-              className="bg-white w-full flex justify-center items-center text-purple-500 py-2 px-6 rounded-full text-lg md:text-xl font-semibold hover:bg-purple-600 hover:text-white focus:ring-2 focus:ring-purple-500 transition duration-300"
+              className="bg-white w-full flex justify-center items-center text-blue-500 py-2 px-6 rounded-full text-lg md:text-xl font-semibold hover:bg-blue-600 hover:text-white focus:ring-2 focus:ring-blue-500 transition duration-300"
             >
               <AiOutlineSwapRight size={20} />
               <span className="items-center">
