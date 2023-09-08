@@ -49,7 +49,7 @@ const Login = () => {
 
   return (
     <main className="w-full h-screen flex justify-center items-center sm:bg-gray-100">
-      <section className="w-auto max-w-md bg-snow p-8 rounded-lg sm:shadow-md md:w-2/3 lg:w-1/2 mt-20">
+      <section className="w-auto max-w-md p-8 rounded-lg sm:shadow-md md:w-2/3 lg:w-1/2 mt-20">
         <h2 className="text-center font-semibold text-3xl mb-6">
           Enter correct credentials to login
         </h2>

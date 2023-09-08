@@ -5,7 +5,7 @@ const Section2 = () => {
       <div className="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
         <div className="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
           <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-            Designed for Freelancers, Clients and Businesses
+            Onboarding Process for Freelancers, Clients and Businesses
           </h2>
           <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
             Here at Assist we leverage technology to help businesses outsource
@@ -17,7 +17,7 @@ const Section2 = () => {
             <h3 className="mb-4 text-2xl font-semibold">Freelancers</h3>
             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
               {" "}
-              Discover an easier way to find Clients
+              Onboarding Process for Virtual Assistants
             </p>
             <div className="flex items-baseline justify-center my-8">
               {/*--<span className="mr-2 text-5xl font-extrabold">$29</span>
@@ -37,7 +37,7 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Showcase Your Skills</span>
+                <span>Register and Create Profile</span>
               </li>
               <li className="flex items-center space-x-3">
                 <svg
@@ -52,7 +52,7 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span> Marketing Assistance</span>
+                <span> Browse Available Jobs</span>
               </li>
               <li className="flex items-center space-x-3">
                 <svg
@@ -67,7 +67,7 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span> Flexible Pay</span>
+                <span>Submit Bids</span>
               </li>
               <li className="flex items-center space-x-3">
                 <svg
@@ -82,7 +82,7 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Rating and Review</span>
+                <span>Get Selected by a Client</span>
               </li>
               <li className="flex items-center space-x-3">
                 <svg
@@ -97,7 +97,7 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Timely Updates and Notifications</span>
+                <span>Complete the Job</span>
               </li>
               <li className="flex items-center space-x-3">
                 <svg
@@ -112,7 +112,22 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Reviews and Rating</span>
+                <span>Submit Work for Client Approval</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <svg
+                  className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Get Paid</span>
               </li>
             </ul>
             <Link
@@ -126,7 +141,7 @@ const Section2 = () => {
           <div className="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
             <h3 className="mb-4 text-2xl font-semibold">Clients</h3>
             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-              Get connected to qualified and competent virtual assistants
+             Client Onboarding Process
             </p>
             <div className="flex items-baseline justify-center my-8">
               {/*<!-- <span className="mr-2 text-5xl font-extrabold">$99</span>
@@ -146,7 +161,7 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Find Your Perfect Virtual Assistant</span>
+                <span>Create an Account</span>
               </li>
               <li className="flex items-center space-x-3">
                 <svg
@@ -161,7 +176,7 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Dedicated Support</span>
+                <span>Fund Your Account</span>
               </li>
               <li className="flex items-center space-x-3">
                 <svg
@@ -176,7 +191,7 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Secure Payments</span>
+                <span>Post a Job</span>
               </li>
               <li className="flex items-center space-x-3">
                 <svg
@@ -191,7 +206,7 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Verified Professionals</span>
+                <span>Select the Best Virtual Assistant</span>
               </li>
               <li className="flex items-center space-x-3">
                 <svg
@@ -206,8 +221,54 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Personalized Matching</span>
+                <span>Assign Work</span>
               </li>
+              <li className="flex items-center space-x-3">
+                <svg
+                  className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Pay in Escrow</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <svg
+                  className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Receive Job</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <svg
+                  className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Approve Work & Finalize Payment</span>
+              </li>
+              
             </ul>
             <Link
               to="/register"
@@ -220,8 +281,7 @@ const Section2 = () => {
           <div className="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
             <h3 className="mb-4 text-2xl font-semibold">Business</h3>
             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-              Grow your business by outsourcing qualified and competent virtual
-              assistants
+              Business Onboarding
             </p>
             <div className="flex items-baseline justify-center my-8">
               {/*--  <span className="mr-2 text-5xl font-extrabold">$499</span>
@@ -241,7 +301,7 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Product Matching</span>
+                <span>Create an Account</span>
               </li>
               <li className="flex items-center space-x-3">
                 <svg
@@ -256,7 +316,7 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Secure Payment</span>
+                <span>Consult Us or Post a Job</span>
               </li>
               <li className="flex items-center space-x-3">
                 <svg
@@ -271,7 +331,23 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Dedicated Support</span>
+                <span>Create a Virtul Space for your work</span>
+              </li>
+              
+              <li className="flex items-center space-x-3">
+                <svg
+                  className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Select the Best Virtual Assistant/Assistants for your job</span>
               </li>
               <li className="flex items-center space-x-3">
                 <svg
@@ -286,7 +362,7 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Product review </span>
+                <span>Assign Work & Pay in Escrow</span>
               </li>
               <li className="flex items-center space-x-3">
                 <svg
@@ -301,7 +377,22 @@ const Section2 = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Customized Assistance</span>
+                <span>Receive Job & Approve Work</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <svg
+                  className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Finalize Payment</span>
               </li>
             </ul>
             <Link

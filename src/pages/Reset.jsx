@@ -36,7 +36,7 @@ const Reset = () => {
               Email Address
             </label>
             <input
-              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-purple-500 mb-2"
+              className="w-full px-4 py-2 rounded-lg focus:outline-none border focus:ring-2 focus:ring-blue-500 mb-2"
               type="email"
               required
               placeholder=""
@@ -47,7 +47,7 @@ const Reset = () => {
           <div className="w-full text-center grid place-items-center mt-2 pt-2">
             <button
               type="submit"
-              className="bg-white w-full flex justify-center items-center text-purple-500 py-2 px-6 rounded-full text-lg md:text-xl font-semibold hover:bg-purple-600 hover:text-white focus:ring-2 focus:ring-purple-500 transition duration-300"
+              className="bg-white w-full flex justify-center items-center text-blue-500 py-2 px-6 rounded-full text-lg md:text-xl font-semibold hover:bg-blue-600 hover:text-white focus:ring-2 focus:ring-blue-500 transition duration-300"
             >
               <span className="flex text-center">
                 <span className="items-center">Reset Password</span>
