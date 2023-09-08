@@ -121,10 +121,10 @@ const JobTypes = () => {
               </div>
               {expandedJobType === index && (
                 <div className="mt-2">
-                  <p className="text-black-700">{job.mainContent}
+                  <p className="text-black-700 text-xs">{job.mainContent} <br />
                   <Link
                 to="*"
-                className="inline-flex items-center text-base font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700"
+                className="inline-flex items-center text-base font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700 text-xs"
               >
                 Read more
                 <svg
